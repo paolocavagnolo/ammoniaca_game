@@ -5,7 +5,7 @@ import time
 
 pygame.init()
 
-DEBUG = True
+DEBUG = False
 
 WW = 1920
 HH = 1080
@@ -385,7 +385,7 @@ run = True
 update = True
 special = (None,None)
 
-STEP = 16
+STEP = 0
 reset()
 while run:
 
