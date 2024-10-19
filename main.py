@@ -13,7 +13,7 @@ HH = 1080
 screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
 #screen = pygame.display.set_mode((WW, HH))
 
-NUMBER_OF_STEPS = 21
+NUMBER_OF_STEPS = 22
 
 # DEFINE SOURCE OBJS
 backg_nms = list()
@@ -93,6 +93,10 @@ fixed_pos[2].append((WW/5*3+80,HH/4*2-50))
 ## STEP 3 - ERRORE
 
 backg_nms[3] = 'sfondi/03_01.png'
+
+## STEP 21 - ERRORE
+
+backg_nms[21] = 'sfondi/03_02.png'
 
 ## STEP 4 - SCHEDE INFO
 
@@ -445,7 +449,7 @@ while run:
         NEXT_STEP = 4
       elif special[1] == 1:
         pygame.mixer.Sound.play(error_s)
-        NEXT_STEP = 3
+        NEXT_STEP = 21
       elif special[1] == 2:
         pygame.mixer.Sound.play(win_s)
         NEXT_STEP = 3
@@ -507,6 +511,10 @@ while run:
                 start_position = box.center
 
           elif STEP == 3:
+            NEXT_STEP = 2
+            sT = time.time()
+
+          elif STEP == 21:
             NEXT_STEP = 2
             sT = time.time()
 
