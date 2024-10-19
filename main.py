@@ -366,7 +366,6 @@ FIRST = True
 
 def reset():
   global on_board, NUMBER_OF_STEPS, movin_img, original_, movin_rec, movin_pos, blocked, special, FIRST
-  print("RESET!")
 
   special = (None,None)
   on_board = []
@@ -385,11 +384,11 @@ run = True
 update = True
 special = (None,None)
 
+FPS = 50
+
 STEP = 0
 reset()
 while run:
-
-  print("B",blocked)
 
   # SET BACKGROUND 
   screen.blit(backg_img[STEP], (0,0))
@@ -683,12 +682,8 @@ while run:
       if event.type == pygame.QUIT:
         run = False
 
-      if DEBUG:
-        print("STEP:",STEP)
-        print("active_box:",active_box)
-        print("on_board:",on_board)
-
   pygame.display.flip()
+  time.sleep(1/FPS)
 
 
 print("Exit gently")
