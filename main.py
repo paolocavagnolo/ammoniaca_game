@@ -60,26 +60,26 @@ for i in range(NUMBER_OF_STEPS):
 
 ## STEP 0 - START
 
-backg_nms[0] = 'sfondi/01.png'
+backg_nms[0] = 'sfondi/00_-01-01.png'
 
 fixed_nms[0].append('sfondi/01_01.png') # Pulsante PLAY
-fixed_pos[0].append((WW/2-40,HH/3-70))
+fixed_pos[0].append((WW/2-39,HH/3-69))
 
 ## STEP 1 - INTRO
 
-backg_nms[1] = 'sfondi/02.png'
+backg_nms[1] = 'sfondi/00_-01-02.png'
 
-movin_nms[1].append('schede/01_-10.png') # Scheda 1
-movin_pos[1].append((WW/5-15,HH/2+162))
+movin_nms[1].append('schede/01_-10_01.png') # Scheda 1
+movin_pos[1].append((WW/5-17,HH/2+160))
 
-dropp_pos[1] = [WW/6*4,HH/5*3,WW/6,HH/4]
+dropp_pos[1] = [WW/6*4,HH/5*3,WW/5,HH/3]
 
 ## STEP 2 - GIOCO 1
 
-backg_nms[2] = 'sfondi/03.png'
+backg_nms[2] = 'sfondi/00_-01-03.png'
 
-movin_nms[2].append('schede/01_-12.png') # Scheda 1
-movin_pos[2].append((WW/6*5+88,HH/5*4-10))
+movin_nms[2].append('schede/01_-12_n.png') # Scheda 1
+movin_pos[2].append((WW/6*5+91,HH/5*4-32))
 
 fixed_nms[2].append('schede/01_-12.png') # 
 fixed_pos[2].append((WW/5+50,HH/4*2+30))
@@ -92,30 +92,26 @@ fixed_pos[2].append((WW/5*3+80,HH/4*2-50))
 
 ## STEP 3 - ERRORE
 
-backg_nms[3] = 'sfondi/03_01.png'
+backg_nms[3] = 'sfondi/00_-01-04.png'
 
-## STEP 21 - ERRORE
+## STEP 4 - NON SENSO
 
-backg_nms[21] = 'sfondi/03_02.png'
-
-## STEP 4 - SCHEDE INFO
-
-backg_nms[4] = 'sfondi/04_01.png'
+backg_nms[4] = 'sfondi/00_-01-04.01.png'
 
 ## STEP 5 - SCHEDE INFO
 
-backg_nms[5] = 'sfondi/04_02.png'
+backg_nms[5] = 'sfondi/00_-01-05.01.png'
 
 ## STEP 6 - SCHEDE INFO
 
-backg_nms[6] = 'sfondi/04_03.png'
+backg_nms[6] = 'sfondi/00_-01-05.02.png'
 
 ## STEP 7 - THE GGGGAME
 
-backg_nms[7] = 'sfondi/05.png'
+backg_nms[7] = 'sfondi/00_-01-06.png'
 
-H1 = HH/2-80
-H2 = HH/2+210
+H1 = HH/2-83
+H2 = HH/2+212
 
 DD = 30
 
@@ -129,31 +125,31 @@ fixed_nms[7].append('schede/01_-10.png') # Pulsante PLAY
 fixed_pos[7].append((WW/9*8-50,HH/2+65))
 
 movin_nms[7].append('schede/01_-05.png') # Soda caustica no
-movin_pos[7].append((X1+10,HH/2+55))
+movin_pos[7].append((X1+7,HH/2+64))
 
 movin_nms[7].append('schede/01_-01.png') # platino ok
-movin_pos[7].append((X2,H1-3))
+movin_pos[7].append((X2+4,H1))
 
 movin_nms[7].append('schede/01_-02.png') # ghiaccio ok
-movin_pos[7].append((X3-1,H1-4))
+movin_pos[7].append((X3-1,H1))
 
 movin_nms[7].append('schede/01_-06.png') # acqua acida ok
-movin_pos[7].append((X4,H1-4))
+movin_pos[7].append((X4-2,H1))
 
 movin_nms[7].append('schede/01_-08.png') # calore ok
-movin_pos[7].append((X5+15,H1-5))
+movin_pos[7].append((X5+22,H1))
 
 movin_nms[7].append('schede/01_-04.png') # idrogeno ok
-movin_pos[7].append((X2+2,H2+5))
+movin_pos[7].append((X2+2,H2))
 
 movin_nms[7].append('schede/01_-03.png') # ossigeno no
-movin_pos[7].append((X3-3,H2+5))
+movin_pos[7].append((X3-3,H2))
 
 movin_nms[7].append('schede/01_-07.png') # anidride no
-movin_pos[7].append((X4,H2+4))
+movin_pos[7].append((X4,H2))
 
 movin_nms[7].append('schede/01_-09.png') # pressione ok
-movin_pos[7].append((X5+17,H2+3))
+movin_pos[7].append((X5+17,H2))
 
 ordine_step7 = [5,4,8,1,3,2]
 
@@ -174,14 +170,14 @@ step7_posizioni = [step7_1,step7_2,step7_3,step7_4,step7_5,step7_6]
 
 ## STEP 8 - THE GGGGAME WIN
 
-backg_nms[8] = 'sfondi/05_01.png'
+backg_nms[8] = 'sfondi/00_-01-07.png'
 
 ## STEP 8 - GIOCO 2
 
-backg_nms[9] = 'sfondi/06.png'
+backg_nms[9] = 'sfondi/00_-01-09.00.png'
 
 movin_nms[9].append('schede/01_-11.png') # Scheda 1
-movin_pos[9].append((WW/6*5+83,HH/5*3+179))
+movin_pos[9].append((WW/6*5+82,HH/5*3+179))
 
 fixed_nms[9].append('schede/01_-11.png') # 
 fixed_pos[9].append((WW/5+37,HH/4*2-50+30))
@@ -194,51 +190,55 @@ fixed_pos[9].append((WW/5*3+7,HH/4*2+60))
 
 ## STEP 10 - ELEVATO INQUINAMENTO
 
-backg_nms[10] = 'sfondi/06_02.png'
+backg_nms[10] = 'sfondi/00_-01-10.png'
 
 ## STEP 11 - SPAZIO ESAURITO
 
-backg_nms[11] = 'sfondi/06_01.png'
+backg_nms[11] = 'sfondi/00_-01-09.01.png'
 
 ## STEP 12 - AMMO INFO
 
-backg_nms[12] = 'sfondi/07_01.png'
+backg_nms[12] = 'sfondi/00_-01-11.01.png'
 
 ## STEP 13 - AMMO INFO
 
-backg_nms[13] = 'sfondi/07_02.png'
+backg_nms[13] = 'sfondi/00_-01-11.02.png'
 
 ## STEP 14 - AMMO INFO
 
-backg_nms[14] = 'sfondi/07_03.png'
+backg_nms[14] = 'sfondi/00_-01-11.03.png'
 
 ## STEP 15 - AMMO INFO
 
-backg_nms[15] = 'sfondi/07_04.png'
+backg_nms[15] = 'sfondi/00_-01-11.04.png'
 
 ## STEP 16 - THE GGGAME 2
 
-backg_nms[16] = 'sfondi/08.png'
+backg_nms[16] = 'sfondi/00_-01-12.00.png'
 
 fixed_nms[16].append('schede/01_-10.png') # Pulsante PLAY
 fixed_pos[16].append((WW/9*8-240,HH/2+95))
 
 movin_nms[16].append('schede/01_-14.png') # Soda caustica no
-movin_pos[16].append((WW/7*2-168,HH/4*2+93))
+movin_pos[16].append((WW/7*2-167,HH/4*2+92))
 
 movin_nms[16].append('schede/01_-15.png') # platino ok
-movin_pos[16].append((WW/7*3-150,HH/4*2+93))
+movin_pos[16].append((WW/7*3-152,HH/4*2+92))
 
 movin_nms[16].append('schede/01_-16.png') # ghiaccio ok
-movin_pos[16].append((WW/7*4-127,HH/4*2+93))
+movin_pos[16].append((WW/7*4-129,HH/4*2+92))
+
+## STEP 21 - NON UTILIZZABILE
+
+backg_nms[21] = 'sfondi/00_-01-12.01_NUOVO.png'
 
 ## STEP 17 - FERTILIZZANTE
 
-backg_nms[17] = 'sfondi/09.png'
+backg_nms[17] = 'sfondi/00_-01-13.00.png'
 
 ## STEP 18 - AMMO INFO
 
-backg_nms[18] = 'sfondi/13_01.png'
+backg_nms[18] = 'sfondi/00_-01-13.01.png'
 
 movin_nms[18].append('schede/01_-13.png') # Scheda 1
 movin_pos[18].append((WW/2-244,HH/2+84))
@@ -248,11 +248,11 @@ fixed_pos[18].append((WW/2+200,HH/2+80))
 
 ## STEP 19 - PERSO
 
-backg_nms[19] = 'sfondi/14.png'
+backg_nms[19] = 'sfondi/00_-01-14.png'
 
 ## STEP 20 - VINTO
 
-backg_nms[20] = 'sfondi/15.png'
+backg_nms[20] = 'sfondi/00_-01-15.png'
 
 for img in backg_nms:
 
@@ -444,27 +444,27 @@ while run:
     if special[0] == 2:
       sT = time.time()
 
-      if special[1] == 0: 
+      if special[1] == 1: 
         pygame.mixer.Sound.play(error_s)
         NEXT_STEP = 4
-      elif special[1] == 1:
-        pygame.mixer.Sound.play(error_s)
-        NEXT_STEP = 21
       elif special[1] == 2:
-        pygame.mixer.Sound.play(win_s)
+        pygame.mixer.Sound.play(error_s)
         NEXT_STEP = 3
+      elif special[1] == 0:
+        pygame.mixer.Sound.play(win_s)
+        NEXT_STEP = 5
 
     elif special[0] == 9:
       sT = time.time()
 
       if special[1] == 0: 
-        pygame.mixer.Sound.play(error_s)
+        pygame.mixer.Sound.play(win_s)
         NEXT_STEP = 12
       elif special[1] == 1:
         pygame.mixer.Sound.play(error_s)
         NEXT_STEP = 11
       elif special[1] == 2:
-        pygame.mixer.Sound.play(win_s)
+        pygame.mixer.Sound.play(error_s)
         NEXT_STEP = 10
 
     blocked = True
@@ -473,7 +473,7 @@ while run:
   if NEXT_STEP >= 0:
     if (time.time() - sT) > 0.7:
       STEP = NEXT_STEP
-      pygame.mixer.Sound.play(next_s)
+      
       reset()
       NEXT_STEP = -1
 
@@ -485,13 +485,13 @@ while run:
           pygame.mixer.Sound.play(click_s)
           # RETURN TO HOME
           if return_home.collidepoint(event.pos):
-            pygame.mixer.Sound.play(next_s)
+            
             NEXT_STEP = 0
             sT = time.time()
 
           # RESET
           if reset_card.collidepoint(event.pos):
-            pygame.mixer.Sound.play(next_s)
+            
             NEXT_STEP = 0
             sT = time.time()
 
@@ -514,12 +514,8 @@ while run:
             NEXT_STEP = 2
             sT = time.time()
 
-          elif STEP == 21:
-            NEXT_STEP = 2
-            sT = time.time()
-
           elif STEP == 4:
-            NEXT_STEP = 5
+            NEXT_STEP = 2
             sT = time.time()
 
           elif STEP == 5:
@@ -568,6 +564,10 @@ while run:
 
           elif STEP == 20:
             NEXT_STEP = 0
+            sT = time.time()
+
+          elif STEP == 21:
+            NEXT_STEP = 16
             sT = time.time()
 
 
@@ -629,7 +629,7 @@ while run:
                   on_board.remove(carta_num[STEP][active_box])
 
             elif STEP == 16:
-              if active_box in [0,2]:
+              if active_box in [0,1,2]:
                 if fixed_rec[STEP][0].collidepoint(event.pos): # sopra il barile
                   pygame.mixer.Sound.play(drop_s)
                   movin_rec[STEP][active_box].center = fixed_pos[STEP][0] 
@@ -638,10 +638,16 @@ while run:
                     end_game = False
                     NEXT_STEP = 17
                     sT = time.time()
+                  elif active_box == 1:
+                    end_game = True
+                    pygame.mixer.Sound.play(error_s)
+                    NEXT_STEP = 21
+                    sT = time.time()
                   elif active_box == 2:
                     end_game = True
                     NEXT_STEP = 17
                     sT = time.time()
+
 
                 else:
                   pygame.mixer.Sound.play(poof_s)
@@ -658,10 +664,12 @@ while run:
                 pygame.mixer.Sound.play(drop_s)
                 movin_rec[STEP][active_box].center = fixed_pos[STEP][0] 
 
-                if end_game: # ACIDO SOLFORICO
+                if end_game: 
+                  pygame.mixer.Sound.play(win_s)
                   NEXT_STEP = 20
                   sT = time.time()
                 else:
+                  pygame.mixer.Sound.play(error_s)
                   NEXT_STEP = 19
                   sT = time.time()
 
@@ -672,7 +680,7 @@ while run:
 
 
         if len(on_board) == 6:
-          pygame.mixer.Sound.play(error_s)
+          pygame.mixer.Sound.play(win_s)
           NEXT_STEP = 8
           sT = time.time()
 
