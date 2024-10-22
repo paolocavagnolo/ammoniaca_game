@@ -10,7 +10,7 @@ gioco per hicadhoc
 
 ## rimozione multi touch gesture
 
-sudo apt install gnome-shell-extensions
+sudo apt install gnome-shell-extension-manager
 https://extensions.gnome.org/extension/4049/disable-gestures-2021/
 
 
