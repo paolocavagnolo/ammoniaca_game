@@ -13,7 +13,7 @@ HH = 1080
 screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
 #screen = pygame.display.set_mode((WW, HH))
 
-NUMBER_OF_STEPS = 22
+NUMBER_OF_STEPS = 25
 
 # DEFINE SOURCE OBJS
 backg_nms = list()
@@ -79,13 +79,13 @@ dropp_pos[1] = [WW/6*4,HH/5*3,WW/5,HH/3]
 backg_nms[2] = 'sfondi/00_-01-03.png'
 
 movin_nms[2].append('schede/01_-12_n.png') # Scheda 1
-movin_pos[2].append((WW/6*5+91,HH/5*4-32))
+movin_pos[2].append((WW/6*5+90,HH/5*4-32))
 
 fixed_nms[2].append('schede/01_-12.png') # 
-fixed_pos[2].append((WW/5+50,HH/4*2+30))
+fixed_pos[2].append((WW/5+38,HH/4*2+17))
 
 fixed_nms[2].append('schede/01_-12.png') # 
-fixed_pos[2].append((WW/5*2+60,HH/4*2))
+fixed_pos[2].append((WW/5*2+55,HH/4*2-15))
 
 fixed_nms[2].append('schede/01_-12.png') # 
 fixed_pos[2].append((WW/5*3+80,HH/4*2-50))
@@ -236,7 +236,11 @@ backg_nms[21] = 'sfondi/00_-01-12.01_NUOVO.png'
 
 backg_nms[17] = 'sfondi/00_-01-13.00.png'
 
-## STEP 18 - AMMO INFO
+## STEP 22 - FERTILIZZANTE ACIDO
+
+backg_nms[22] = 'sfondi/00_-01-13.02.png'
+
+## STEP 18 - FERTILIZZANTE PIANTA
 
 backg_nms[18] = 'sfondi/00_-01-13.01.png'
 
@@ -246,6 +250,16 @@ movin_pos[18].append((WW/2-244,HH/2+84))
 fixed_nms[18].append('schede/01_-10.png') # 
 fixed_pos[18].append((WW/2+200,HH/2+80))
 
+## STEP 23 - FERTILIZZANTE PIANTA ACIDA
+
+backg_nms[23] = 'sfondi/00_-01-15.01.png'
+
+movin_nms[23].append('schede/01_-13.01.png') # Scheda 1
+movin_pos[23].append((WW/2-244,HH/2+84))
+
+fixed_nms[23].append('schede/01_-10.png') # 
+fixed_pos[23].append((WW/2+200,HH/2+80))
+
 ## STEP 19 - PERSO
 
 backg_nms[19] = 'sfondi/00_-01-14.png'
@@ -253,6 +267,10 @@ backg_nms[19] = 'sfondi/00_-01-14.png'
 ## STEP 20 - VINTO
 
 backg_nms[20] = 'sfondi/00_-01-15.png'
+
+## STEP 24 - VINTO
+
+backg_nms[24] = 'sfondi/Credits-01-01.png'
 
 for img in backg_nms:
 
@@ -314,8 +332,8 @@ active_box = None
 last_active_box = None
 STEP = 0
 
-return_home = pygame.Rect(0,0,20,20)
-reset_card = pygame.Rect(WW-20,0,20,20)
+return_home = pygame.Rect(0,0,100,100)
+reset_card = pygame.Rect(WW-100,0,100,100)
 
 # TEXT
 
@@ -396,13 +414,6 @@ while run:
 
   # SET BACKGROUND 
   screen.blit(backg_img[STEP], (0,0))
-  if FIRST:
-    FIRST = False
-    pygame.display.flip()
-    if STEP in [3,4,5]:
-      time.sleep(2)
-    else:
-      time.sleep(0.5)
 
   # SET FIXED OBJECTS 
   for i,e in enumerate(fixed_img[STEP]):
@@ -477,12 +488,18 @@ while run:
       reset()
       NEXT_STEP = -1
 
+  if FIRST:
+    FIRST = False
+    pygame.display.flip()
+    time.sleep(0.4)
+
   if not blocked:
     for event in pygame.event.get():
 
       if event.type == pygame.MOUSEBUTTONDOWN:
         if event.button == 1:
           pygame.mixer.Sound.play(click_s)
+
           # RETURN TO HOME
           if return_home.collidepoint(event.pos):
             
@@ -499,10 +516,11 @@ while run:
 
           # GAME LOGIC
           if STEP == 0:
-            NEXT_STEP = 1
-            sT = time.time()
+            if fixed_rec[STEP][0].collidepoint(event.pos):
+              NEXT_STEP = 1
+              sT = time.time()
 
-          elif STEP in [1,2,7,9,16,18]:
+          elif STEP in [1,2,7,9,16,18,23]:
             # ON MOVING
             for num, box in enumerate(movin_rec[STEP]):
               if box.collidepoint(event.pos):
@@ -543,10 +561,6 @@ while run:
             sT = time.time()
 
           elif STEP == 13:
-            NEXT_STEP = 14
-            sT = time.time()
-
-          elif STEP == 14:
             NEXT_STEP = 15
             sT = time.time()
 
@@ -563,11 +577,19 @@ while run:
             sT = time.time()
 
           elif STEP == 20:
-            NEXT_STEP = 0
+            NEXT_STEP = 24
             sT = time.time()
 
           elif STEP == 21:
             NEXT_STEP = 16
+            sT = time.time()
+
+          elif STEP == 22:
+            NEXT_STEP = 23
+            sT = time.time()
+
+          elif STEP == 24:
+            NEXT_STEP = 0
             sT = time.time()
 
 
@@ -636,7 +658,7 @@ while run:
 
                   if active_box == 0: # ACIDO SOLFORICO
                     end_game = False
-                    NEXT_STEP = 17
+                    NEXT_STEP = 22
                     sT = time.time()
                   elif active_box == 1:
                     end_game = True
@@ -657,7 +679,7 @@ while run:
                 pygame.mixer.Sound.play(poof_s)
                 movin_rec[STEP][active_box].center = movin_pos[STEP][active_box]
 
-            elif STEP == 18:
+            elif STEP == 18 or STEP == 23:
 
               if fixed_rec[STEP][0].collidepoint(event.pos): # sopra la pianta
 
