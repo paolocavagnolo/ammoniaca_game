@@ -403,7 +403,7 @@ def reset():
 
 check = True
 run = True
-update = True
+update_timer = 0
 special = (None,None)
 
 FPS = 50
@@ -411,6 +411,11 @@ FPS = 50
 STEP = 0
 reset()
 while run:
+
+  if (time.time() - update_timer) > 180:
+    update_timer = time.time()
+    NEXT_STEP = 0
+    sT = time.time()
 
   # SET BACKGROUND 
   screen.blit(backg_img[STEP], (0,0))
@@ -484,7 +489,6 @@ while run:
   if NEXT_STEP >= 0:
     if (time.time() - sT) > 0.7:
       STEP = NEXT_STEP
-      
       reset()
       NEXT_STEP = -1
 
@@ -499,6 +503,8 @@ while run:
       if event.type == pygame.MOUSEBUTTONDOWN:
         if event.button == 1:
           pygame.mixer.Sound.play(click_s)
+          update = True
+          update_timer = time.time()
 
           # RETURN TO HOME
           if return_home.collidepoint(event.pos):
@@ -511,8 +517,6 @@ while run:
             
             NEXT_STEP = 0
             sT = time.time()
-
-
 
           # GAME LOGIC
           if STEP == 0:
